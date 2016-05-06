@@ -11,6 +11,14 @@ set backspace=indent,eol,start
 "インクリメンタルサーチを有効にする
 "set incsearch
 
+" エンコード
+set encoding=utf8
+" ビープ音を消す
+set vb t_vb=
+set novisualbell
+
+" 右下に表示される行・列の番号を表示する
+set ruler
 "大文字小文字を区別しない
 set ignorecase
 "大文字で検索されたら対象を大文字限定にする
@@ -25,6 +33,8 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" コマンド、検索パターンを10000個まで履歴に残す
+set history=10000
 
 "検索結果をハイライトする
 set hlsearch
@@ -33,10 +43,10 @@ set ruler
 set number
 
 "ファイルタイプに応じて挙動,色を変える
+" シンタックスハイライト
 syntax on
 filetype plugin on
 filetype indent on
-
 
 
 "------------------------Start NeoBundle Scripts-------------------------
@@ -63,7 +73,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
-
 
 " Required:
 call neobundle#end()
